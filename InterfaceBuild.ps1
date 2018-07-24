@@ -19,6 +19,7 @@ $MOXY_INTERFACE_TYPE = "MoxyFix"
 #$sourceDir2 = "\\Source\VSS\AdventOffice\Build\AdventOffice\ServerSetup_"+$env:ADVENT_SERVER_SETUP_VERSION+"\CurrentAll\AdventServer\Media\Default\Disk Images\Disk1"
 #$targetDir = "\\Source\Img\qaimg\DX\"+$env:MOXY_INTERFACE_TYPE+"\"+$env:MOXY_INTERFACE_VERSION
 
+<#
 $sourceDir1 = $env:WORKSPACE + "\" + $env:MOXY_INTERFACE
 $sourceDir2 = $env:WORKSPACE + "\AdventServer\" + $env:ADVENT_SERVER_SETUP_VERSION+ "\CurrentAll\AdventServer\Media\Default\Disk Images\Disk1"
 $targetDir = $env:WORKSPACE + "\target\" + $env:MOXY_INTERFACE_TYPE + "\" + $env:MOXY_INTERFACE_VERSION + $env:BUILD_NUMBER
@@ -35,6 +36,9 @@ If(!(test-path $targetDir))
 {
       New-Item -ItemType Directory -Force -Path $targetDir
 }
+
 Get-ChildItem -Path $sourceDir1 | Copy-Item -Destination $targetDir -Recurse -Container -Force
 Get-ChildItem -Path $sourceDir2 | Copy-Item -Destination $targetDir -Recurse -Container -Force
+#>
 
+Write-Output ("Hello World")
