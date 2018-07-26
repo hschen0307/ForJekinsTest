@@ -1,4 +1,4 @@
-﻿#Copy files from specific interface folder and AdventServerSetup to create a deployable package
+﻿##Copy files from specific interface folder and AdventServerSetup to create a deployable package
 
 #Input(from Jekins) : interface path(or name) , built version,  AdventServerSetup directory
 #Output : 
