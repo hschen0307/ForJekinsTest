@@ -41,4 +41,4 @@ Get-ChildItem -Path $sourceDir1 | Copy-Item -Destination $targetDir -Recurse -Co
 Get-ChildItem -Path $sourceDir2 | Copy-Item -Destination $targetDir -Recurse -Container -Force
 #>
 
-Write-Output ("Hello World")
+###Write-Output ("Hello World")
